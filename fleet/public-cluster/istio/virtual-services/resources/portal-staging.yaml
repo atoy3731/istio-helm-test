@@ -22,7 +22,7 @@ spec:
   gateways:
   - istio-system/public
   hosts:
-  - staging.portal.ranchercarbide.dev
+  - staging-portal.ranchercarbide.dev
   http:
   - route:
     - destination:
