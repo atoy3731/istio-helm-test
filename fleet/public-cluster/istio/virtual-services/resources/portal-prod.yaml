@@ -1,18 +1,3 @@
-apiVersion: networking.istio.io/v1
-kind: VirtualService
-metadata:
-  name: prod-portal-api-vs
-spec:
-  gateways:
-  - istio-system/public
-  hosts:
-  - api.portal.ranchercarbide.dev
-  http:
-  - route:
-    - destination:
-        host: carbide-registry-api.carbide-registry-dashboard.svc.cluster.local
-        port:
-          number: 5000
 ---
 apiVersion: networking.istio.io/v1
 kind: VirtualService
