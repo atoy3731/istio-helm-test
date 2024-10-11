@@ -1,3 +1,5 @@
+name: public-ingressgateway
+
 autoscaling:
   minReplicas: 3
   maxReplicas: 5

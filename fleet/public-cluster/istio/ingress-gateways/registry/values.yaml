@@ -1,3 +1,5 @@
+name: registry-ingressgateway
+
 autoscaling:
   minReplicas: 3
   maxReplicas: 10
