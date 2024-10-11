@@ -13,8 +13,8 @@ spec:
   paths:
   # Base/Istiod
   - "./public-cluster-istio/base"
-  - "./public-cluster-istio/isitod"
+  - "./public-cluster-istio/istiod"
 
   # Ingress Gateways
-  - "./public-cluster-istio/helm/ingress-gateways/public"
-  - "./public-cluster-istio/helm/ingress-gateways/registry"
+  - "./public-cluster-istio/ingress-gateways/public"
+  - "./public-cluster-istio/ingress-gateways/registry"
