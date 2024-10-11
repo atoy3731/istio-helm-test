@@ -5,3 +5,7 @@ autoscaling:
 labels:
   app: registry-ingressgateway
   istio: ingressgateway
+
+service:
+  annotations:
+    cloudprovider.harvesterhci.io/ipam: dhcp
