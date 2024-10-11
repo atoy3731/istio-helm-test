@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
-  name: carbide-registry-api-vs
+  name: staging-portal-api-vs
 spec:
   gateways:
   - istio-system/public
@@ -17,8 +17,7 @@ spec:
 apiVersion: networking.istio.io/v1
 kind: VirtualService
 metadata:
-  name: carbide-registry-dashboard-vs
-  namespace: carbide-reg-dash-staging
+  name: staging-portal-dashboard-vs
 spec:
   gateways:
   - istio-system/public
