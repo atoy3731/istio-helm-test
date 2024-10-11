@@ -1,0 +1,20 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: istio
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/istio-helm-test.git
+  branch: main
+  targets:
+  - clusterSelector:
+      matchLabels:
+        istio-test: enabled
+  paths:
+  # Base/Istiod
+  - "./public-cluster-istio/base"
+  - "./public-cluster-istio/isitod"
+
+  # Ingress Gateways
+  - "./public-cluster-istio/helm/ingress-gateways/public"
+  - "./public-cluster-istio/helm/ingress-gateways/registry"

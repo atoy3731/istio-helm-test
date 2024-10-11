@@ -1,0 +1,11 @@
+defaultNamespace: istio-system
+
+labels:
+  app: public-istio-base
+
+helm:
+  repo: https://istio-release.storage.googleapis.com/charts
+  chart: base
+  version: 1.23.2
+  values:
+    defaultRevision: default

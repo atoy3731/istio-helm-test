@@ -1,0 +1,12 @@
+autoscaleMin: 3
+autoscaleMax: 8
+
+global:
+  proxy:
+    resources:
+      limits:
+        cpu: 100m
+        memory: 200Mi
+      requests:
+        cpu: 30m
+        memory: 50Mi
