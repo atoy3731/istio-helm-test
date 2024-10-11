@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: rancher-carbide-cert
+  namespace: istio-system
+spec:
+  commonName: '*.ranchercarbide.dev'
+  secretName: rfed-dev-cert
+  dnsNames:
+  - ranchercarbide.dev
+  - '*.carbide.rfed.dev'
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: letsencrypt-prod

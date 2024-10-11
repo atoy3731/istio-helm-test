@@ -1,0 +1,9 @@
+defaultNamespace: istio-system
+
+labels:
+  app: public-istio-virtual-services
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: public-istio-gateways

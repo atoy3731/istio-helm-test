@@ -1,0 +1,20 @@
+defaultNamespace: istio-system
+
+labels:
+  app: public-istio-gateways
+
+helm:
+  chart: ./chart
+  valuesFiles:
+  - values.yaml
+
+dependsOn:
+  - selector:
+      matchLabels:
+        app: public-istio-igw-public
+  - selector:
+      matchLabels:
+        app: public-istio-igw-registry
+  - selector:
+      matchLabels:
+        app: public-cert-manager-clusterissuer

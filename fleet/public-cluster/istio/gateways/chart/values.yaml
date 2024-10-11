@@ -1,0 +1,22 @@
+gateways: {}
+  # main:
+  #   selector:
+  #     app: istio-ingressgateway
+  #   servers:
+  #   - hosts:
+  #     - '*.example.com'
+  #     port:
+  #       name: http
+  #       number: 80
+  #       protocol: HTTP
+  #     tls:
+  #       httpsRedirect: true
+  #   - hosts:
+  #     - '*.example.com'
+  #     port:
+  #       name: https
+  #       number: 443
+  #       protocol: HTTPS
+  #     tls:
+  #       credentialName: example-cert
+  #       mode: SIMPLE

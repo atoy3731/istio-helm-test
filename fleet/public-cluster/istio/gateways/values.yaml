@@ -1,0 +1,43 @@
+gateways:
+  public:
+    selector:
+      app: public-ingressgateway
+    servers:
+    - hosts:
+      - '*.ranchercarbide.dev'
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+      - '*.ranchercarbide.dev'
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: rancher-carbide-cert
+        mode: SIMPLE
+  registry:
+    selector:
+      app: registry-ingressgateway
+    servers:
+    - hosts:
+      - 'registry.ranchercarbide.dev'
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+      - 'registry.ranchercarbide.dev'
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: rancher-carbide-cert
+        mode: SIMPLE

@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: carbide-registry-api-vs
+spec:
+  gateways:
+  - istio-system/public
+  hosts:
+  - api.portal.ranchercarbide.dev
+  http:
+  - route:
+    - destination:
+        host: carbide-registry-api.carbide-registry-dashboard.svc.cluster.local
+        port:
+          number: 5000
+---
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: carbide-registry-dashboard-vs
+  namespace: carbide-registry-dashboard
+spec:
+  gateways:
+  - istio-system/public
+  hosts:
+  - portal.ranchercarbide.dev
+  http:
+  - route:
+    - destination:
+        host: carbide-registry-dashboard.carbide-registry-dashboard.svc.cluster.local
+        port:
+          number: 8080

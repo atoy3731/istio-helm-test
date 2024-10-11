@@ -1,0 +1,15 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: public-cert-manager
+  namespace: fleet-default
+spec:
+  repo: https://github.com/atoy3731/istio-helm-test.git
+  branch: main
+  targets:
+  - clusterSelector:
+      matchLabels:
+        cluster: carbide-public-apps
+  paths:
+  - "./fleet/public-cluster/cert-manager/cert-manager"
+  - "./fleet/public-cluster/cert-manager/clusterissuer"
