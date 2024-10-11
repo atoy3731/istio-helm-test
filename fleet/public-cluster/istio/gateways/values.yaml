@@ -12,9 +12,18 @@ gateways:
       tls:
         httpsRedirect: true
     - hosts:
+      - '*.staging.ranchercarbide.dev'
+      port:
+        name: https-staging
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: staging-rancher-carbide-cert
+        mode: SIMPLE
+    - hosts:
       - '*.ranchercarbide.dev'
       port:
-        name: https
+        name: https-prod
         number: 443
         protocol: HTTPS
       tls:
@@ -36,6 +45,36 @@ gateways:
       - 'registry.ranchercarbide.dev'
       port:
         name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: rancher-carbide-cert
+        mode: SIMPLE
+  internal:
+    selector:
+      app: internal-ingressgateway
+    servers:
+    - hosts:
+      - '*.ranchercarbide.dev'
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+    - hosts:
+      - '*.staging.ranchercarbide.dev'
+      port:
+        name: https-staging
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: staging-rancher-carbide-cert
+        mode: SIMPLE
+    - hosts:
+      - '*.ranchercarbide.dev'
+      port:
+        name: https-prod
         number: 443
         protocol: HTTPS
       tls:

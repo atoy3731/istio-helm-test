@@ -1,3 +1,4 @@
 resources:
 - oidc.yaml
 - ranchercarbide-dev.yaml
+- staging-ranchercarbide-dev.yaml
