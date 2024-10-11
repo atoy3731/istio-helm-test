@@ -5,7 +5,7 @@ metadata:
   namespace: istio-system
 spec:
   commonName: '*.ranchercarbide.dev'
-  secretName: rfed-dev-cert
+  secretName: rancher-carbide-cert
   dnsNames:
   - ranchercarbide.dev
   - '*.ranchercarbide.dev'
