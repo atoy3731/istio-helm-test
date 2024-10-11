@@ -5,7 +5,7 @@ metadata:
   name: staging-portal-dashboard-vs
 spec:
   gateways:
-  - istio-system/public
+  - istio-system/staging
   hosts:
   - staging-portal.ranchercarbide.dev
   http:
