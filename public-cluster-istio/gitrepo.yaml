@@ -1,7 +1,7 @@
 kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
-  name: istio
+  name: public-cluster-istio
   namespace: fleet-default
 spec:
   repo: https://github.com/atoy3731/istio-helm-test.git
