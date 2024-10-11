@@ -8,7 +8,7 @@ spec:
   secretName: rfed-dev-cert
   dnsNames:
   - ranchercarbide.dev
-  - '*.carbide.rfed.dev'
+  - '*.ranchercarbide.dev'
   issuerRef:
     group: cert-manager.io
     kind: ClusterIssuer
