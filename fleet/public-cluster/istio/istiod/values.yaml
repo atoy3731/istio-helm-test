@@ -10,3 +10,10 @@ global:
       requests:
         cpu: 30m
         memory: 50Mi
+
+meshConfig:
+  extensionProviders:
+    - envoyExtAuthzGrpc:
+        port: "10003"
+        service: authservice.authservice.svc.cluster.local
+      name: authservice
