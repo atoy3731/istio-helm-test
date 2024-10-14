@@ -14,6 +14,6 @@ global:
 meshConfig:
   extensionProviders:
     - envoyExtAuthzGrpc:
-        port: "10003"
-        service: authservice.authservice.svc.cluster.local
-      name: authservice
+        port: "50051"
+        service: registry-rate-limiter.registry-rate-limiter.svc.cluster.local
+      name: registry-rate-limiter
